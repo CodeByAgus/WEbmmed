@@ -4,8 +4,8 @@
  */
 
 // Configuración de Supabase
-const SUPABASE_URL = 'YOUR_SUPABASE_URL'; // Reemplazar con tu URL
-const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY'; // Reemplazar con tu clave
+const SUPABASE_URL = 'https://ganykqpblueomlypruus.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdhbnlrcXBibHVlb21seXBydXVzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU1Mjg2NTMsImV4cCI6MjEwMTEwNDY1M30.n6l21AbKpWLb58uklyaC8NpFJFbjMna_cCFc-f6xH4k';
 
 // Inicializar cliente de Supabase
 let supabaseClient = null;
