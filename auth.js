@@ -1,11 +1,9 @@
+import { supabase } from "./lib/supabase";
+
 /**
  * Módulo de Autenticación con Supabase
  * Gestiona la conexión y autenticación de usuarios
  */
-
-// Configuración de Supabase
-const SUPABASE_URL = 'https://ganykqpblueomlypruus.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdhbnlrcXBibHVlb21seXBydXVzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU1Mjg2NTMsImV4cCI6MjEwMTEwNDY1M30.n6l21AbKpWLb58uklyaC8NpFJFbjMna_cCFc-f6xH4k';
 
 // Inicializar cliente de Supabase
 let supabaseClient = null;
@@ -16,11 +14,11 @@ let supabaseClient = null;
  */
 async function initSupabase() {
   try {
-    if (!window.supabase) {
+    if (!supabase) {
       throw new Error('Supabase no está cargado. Asegúrate de incluir la librería.');
     }
 
-    supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    supabaseClient = supabase;
     console.log('✓ Cliente Supabase inicializado correctamente');
     return supabaseClient;
   } catch (error) {
